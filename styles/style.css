@@ -1,0 +1,32 @@
+:root {
+  --background-primary: #1a191d;
+  --background-secondary: #201f23;
+  --primary: #450e7b;
+  --secondary: #9169f3;
+  --blue: #5fc7da;
+  --gradient: ;
+  --font-color-primary: #ffffff;
+  --font-color-secondary: #b6b6b6;
+  --title: bold 36px/1.5 "Archivo", sans-serif;
+  --text-destaque: bold 40px/1.5 "Archivo", sans-serif;
+  --sub-title: medium 20px/1.5 "Archivo", sans-serif;
+  --text: regular 14px/1.5 "Archivo", sans-serif;
+}
+
+body {
+  font-family: "Archivo", sans-serif;
+  background-color: var(--background-primary);
+}
+
+h1 {
+  font: var(--title);
+  color: var(--font-color-primary);
+}
+h2 {
+  font: var(--sub-title);
+  color: var(--font-color-primary);
+}
+p {
+  font: var(--text);
+  color: var(--font-color-secondary);
+}
