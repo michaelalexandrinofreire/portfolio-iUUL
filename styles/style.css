@@ -9,10 +9,13 @@
   --font-color-secondary: #b6b6b6;
   --title: bold 36px/1.5 "Archivo", sans-serif;
   --text-destaque: bold 40px/1.5 "Archivo", sans-serif;
-  --sub-title: medium 20px/1.5 "Archivo", sans-serif;
+  --sub-title: 500 18px/1.5 "Archivo", sans-serif;
+  --nav-link: 600 16px/1.5 "Archivo", sans-serif;
   --text: regular 14px/1.5 "Archivo", sans-serif;
+  --shadow-navbar: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+/* geral */
 body {
   font-family: "Archivo", sans-serif;
   background-color: var(--background-primary);
@@ -29,4 +32,38 @@ h2 {
 p {
   font: var(--text);
   color: var(--font-color-secondary);
+}
+
+/*menu*/
+.navbar{
+  box-shadow: var(--shadow-navbar);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+}
+.link-navbar{
+  color: var(--font-color-primary);
+  font: var(--nav-link);
+  position: relative;
+  max-width: 180px;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+.link-navbar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 0;
+  height: 1px;
+  background-color: var(--blue);
+  transition: width 0.5s ease;
+}
+.link-navbar:hover::after {
+  width: 100%;
+}
+.button{
+  background-color: transparent;
+  border: none;
 }
