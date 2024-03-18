@@ -10,7 +10,7 @@
   --title: bold 36px/1.5 "Archivo", sans-serif;
   --text-destaque: bold 40px/1.5 "Archivo", sans-serif;
   --sub-title: 500 18px/1.5 "Archivo", sans-serif;
-  --nav-link: 600 16px/1.5 "Archivo", sans-serif;
+  --nav-link-font: 600 16px/1.5 "Archivo", sans-serif;
   --text: regular 14px/1.5 "Archivo", sans-serif;
   --shadow-navbar: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -36,34 +36,51 @@ p {
 
 /*menu*/
 .navbar{
+  background-color: var(--background-primary);
   box-shadow: var(--shadow-navbar);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 70px;
+  min-height: 65px;
 }
-.link-navbar{
+.container{
+  justify-content: space-around;
+  
+}
+.button{
+  background-color: transparent;
+  border: none;
+}
+.navbar-nav{
+  display: flex;
+  gap: 25px;
+}
+.nav-link{
   color: var(--font-color-primary);
-  font: var(--nav-link);
+  font: var(--nav-link-font);
+}
+.nav-link:hover{
+  color: var(--font-color-primary);
+}
+.nav-item {
+  font: var(--nav-link-font);
   position: relative;
   max-width: 180px;
   text-decoration: none;
-  padding-bottom: 10px;
 }
-.link-navbar::after {
+
+.nav-item::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 1px;
+  bottom: 0;
   width: 0;
   height: 1px;
   background-color: var(--blue);
   transition: width 0.5s ease;
 }
-.link-navbar:hover::after {
+
+.nav-item:hover::after {
   width: 100%;
-}
-.button{
-  background-color: transparent;
-  border: none;
+  max-width: 185px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
