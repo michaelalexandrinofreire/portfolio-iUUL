@@ -82,6 +82,13 @@ p {
   align-items: center;
   display: flex;
 }
+.nav-item.active::after {
+  width: 100%;
+  max-width: 185px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 
 /* footer */
 footer{
