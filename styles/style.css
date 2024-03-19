@@ -19,6 +19,10 @@
 body {
   font-family: "Archivo", sans-serif;
   background-color: var(--background-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 h1 {
@@ -80,6 +84,29 @@ p {
 .nav-item:hover::after {
   width: 100%;
   max-width: 185px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/* footer */
+footer{
+  box-shadow: var(--shadow-navbar);
+  padding: 15px 0px;
+}
+.footer-list{
+  display: flex;
+  gap: 20px;
+}
+.footer-icon{
+  width: 20px;
+  height: 20px;
+}
+.footer-item{
+  background-color: var(--primary);
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
   justify-content: center;
   align-items: center;
   display: flex;
