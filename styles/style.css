@@ -25,10 +25,11 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  color: var(--font-color-primary);
-}
-h2 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   color: var(--font-color-primary);
 }
 p {
@@ -37,24 +38,24 @@ p {
 }
 
 /*menu*/
-.navbar{
+.navbar {
   background-color: var(--background-primary);
   box-shadow: var(--shadow-navbar);
   min-height: 65px;
 }
-.button{
+.button {
   background-color: transparent;
   border: none;
 }
-.navbar-nav{
+.navbar-nav {
   display: flex;
   gap: 25px;
 }
-.nav-link{
+.nav-link {
   color: var(--font-color-primary);
   font: var(--nav-link-font);
 }
-.nav-link:hover{
+.nav-link:hover {
   color: var(--font-color-primary);
 }
 .nav-item {
@@ -91,19 +92,19 @@ p {
 }
 
 /* footer */
-footer{
+footer {
   box-shadow: var(--shadow-navbar);
   padding: 15px 0px;
 }
-.footer-list{
+.footer-list {
   display: flex;
   gap: 20px;
 }
-.footer-icon{
+.footer-icon {
   width: 20px;
   height: 20px;
 }
-.footer-item{
+.footer-item {
   background-color: var(--primary);
   width: 30px;
   height: 30px;
@@ -114,16 +115,16 @@ footer{
 }
 
 /*página inicial*/
-main{
+main {
   padding: 20px 0;
 }
-.text-destaque{
+.text-destaque {
   color: var(--secondary);
 }
-.title{
+.title {
   max-width: 682px;
 }
-.sub-title{
+.sub-title {
   color: var(--font-color-secondary);
   margin-bottom: 20px;
   max-width: 522px;
@@ -157,17 +158,17 @@ main{
 }
 .circle-profile-one {
   width: 300px;
-  height: 300px; 
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid var(--secondary); 
+  border: 3px solid var(--secondary);
   border-radius: 50%;
 }
 
 .circle-profile-two {
-  width: 250px; 
-  height: 250px; 
+  width: 250px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -180,8 +181,46 @@ main{
   border-radius: 50%;
 }
 
-@media screen and (max-width: 766px){
-  .col-md-2{
+/*Formação*/
+.formacoes{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.formacao {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.curso {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.curso-name{
+  margin-bottom: 0rem;
+}
+.instiuicao-name{
+  color: var(--blue);
+  font-size: 14px;
+}
+.circle {
+  width: 10px;
+  height: 10px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+}
+.container-formacao{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 766px) {
+  .col-md-2 {
     justify-content: center;
     align-items: center;
     display: flex;
