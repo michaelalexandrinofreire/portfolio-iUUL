@@ -22,15 +22,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 h1 {
-  font: var(--title);
   color: var(--font-color-primary);
 }
 h2 {
-  font: var(--sub-title);
   color: var(--font-color-primary);
 }
 p {
@@ -110,4 +108,43 @@ footer{
   justify-content: center;
   align-items: center;
   display: flex;
+}
+
+/*página inicial*/
+.text-destaque{
+  color: var(--secondary);
+}
+.title{
+  max-width: 682px;
+}
+.sub-title{
+  color: var(--font-color-secondary);
+  margin-bottom: 20px;
+  max-width: 522px;
+}
+.button-curriculo {
+  background-color: var(--primary);
+  border-radius: 6px;
+  border: none;
+  transition: all 0.5s ease;
+  display: inline-block;
+  width: 100%;
+  max-width: 110px;
+  height: 100%;
+  max-height: 30px;
+}
+.button-curriculo:hover {
+  background-color: var(--secondary);
+}
+.link-curriculo {
+  font-size: 12px;
+  color: var(--font-color-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  transition: all 0.5s ease;
+}
+.button-curriculo:hover .link-curriculo {
+  color: #1a191d;
+  font-weight: 700;
 }
