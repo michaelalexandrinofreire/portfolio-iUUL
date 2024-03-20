@@ -373,6 +373,10 @@ main {
   max-width: 200px;
   margin-bottom: 0rem;
 }
+.projetos{
+  flex-wrap: wrap;
+  gap: 20px;
+}
 @media screen and (max-width: 766px) {
   .col-md-2 {
     justify-content: center;
