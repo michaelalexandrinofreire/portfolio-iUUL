@@ -219,6 +219,35 @@ main {
   align-items: center;
 }
 
+/* página de atuação profissional*/
+.atuacoes{
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.atuacao-profissional {
+  width: 240px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+  background-color: #201f23;
+  border-radius: 5px;
+}
+.atuacao-profissional::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(140deg, #450E7B, #5FC7DA);
+  z-index: -1;
+  border-radius: 6px;
+  margin: -3px;
+}
+.atuacao-profissional-icon{
+  width: 110px;
+}
 @media screen and (max-width: 766px) {
   .col-md-2 {
     justify-content: center;
