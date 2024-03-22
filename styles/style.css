@@ -411,6 +411,7 @@ main {
   margin-top: 10px;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 .redes-sociais-link {
   background-color: var(--primary);
