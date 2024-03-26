@@ -16,7 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/styles/style.css" />
 
-    <title>Contato</title>
+    <title>Mensagens de Contato</title>
   </head>
   <body class="p-0 m-0 border-0 m-0 border-0">
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -59,94 +59,8 @@
     </nav>
 
     <main class="container justify-content-around text-center">
-      <h4 class="title-contato">Vamos trabalhar juntos?</h4>
-      <h6 class="subtitle-contato">Entre em contato</h6>
-      <div class="d-flex justify-content-around mt-4 container-contatos">
-        <div class="contatos">
-          <div class="contato">
-            <button class="contato-button" data-text="(88) 98178-1389">
-              <img src="/assets/imgs/icons/Copy.svg" alt="copiar" />
-            </button>
-            <p>(88) 98178-1389</p>
-          </div>
-          <div class="contato">
-            <button
-              class="contato-button"
-              data-text="michaelalexandrinofreire@gmail.com"
-            >
-              <img src="/assets/imgs/icons/Copy.svg" alt="copiar" />
-            </button>
-            <p>michaelalexandrinofreire@gmail.com</p>
-          </div>
-          <div class="redes-sociais">
-            <a
-              class="redes-sociais-link linkedin"
-              href="https://www.linkedin.com/in/michael-alexandrino-freire"
-              target="_blank"
-            >
-              <img
-                src="/assets/imgs/icons/linkedin.svg"
-                alt="linkedin"
-                class="redes-sociais-icon"
-              />
-              <span>Linkedin</span>
-            </a>
-            <a
-              class="redes-sociais-link github"
-              href="https://github.com/michaelalexandrinofreire"
-              target="_blank"
-            >
-              <img
-                src="/assets/imgs/icons/Github.svg"
-                alt="github"
-                class="redes-sociais-icon"
-              />
-              <span>Github</span>
-            </a>
-
-            <a
-              class="redes-sociais-link instagram"
-              href="https://www.instagram.com/sivanmichael9/"
-              target="_blank"
-            >
-              <img
-                src="/assets/imgs/icons/instagram.svg"
-                alt="instagram"
-                class="redes-sociais-icon"
-              />
-              <span>Instagram</span>
-            </a>
-          </div>
-        </div>
-        <div class="formulario-container">
-          <h6 class="formulario-title">Envie um e-mail</h6>
-          <form class="formulario" id="contactForm">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Seu email"
-              required
-            />
-            <input
-              type="text"
-              id="titulo"
-              name="titulo"
-              placeholder="Título"
-              required
-            />
-            <textarea
-              id="mensagem"
-              name="mensagem"
-              placeholder="Mensagem"
-              rows="6"
-              required
-            ></textarea>
-            <button class="formulario-button" type="submit">Enviar</button>
-          </form>
-          <a href="/pages/mensagens.html" class="adm-link">entrar como administrador</a>
-        </div>
-      </div>
+      <h3>Mensagens de Contato</h3>
+      <div id="messagesList" class="m-5"></div>
     </main>
 
     <footer class="">

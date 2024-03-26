@@ -388,10 +388,10 @@ main {
   gap: 10px;
   width: 360px;
 }
-.title-contato{
+.title-contato {
   margin-top: 20px;
 }
-.subtitle-contato{
+.subtitle-contato {
   margin-bottom: 70px;
 }
 .contato {
@@ -507,8 +507,49 @@ textarea {
   color: #1a191d;
   font-weight: 700;
 }
-.container-contatos{
+.container-contatos {
   flex-wrap: wrap;
+}
+.adm-link {
+  color: var(--font-color-secondary);
+  font-size: 10px;
+  padding: 10px 0;
+  text-decoration: none;
+}
+/*mensagens*/
+.message {
+  background-color: var(--background-secondary);
+  border: var(--primary) 2px solid;
+  padding: 10px;
+  border-radius: 6px;
+  width: 330px;
+  max-width: 330px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  font-size: 14px;
+  gap: 10px;
+  position: relative;
+}
+.message-text {
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  width: 280px;
+  height: 70px;
+  text-align: start;
+}
+.message strong {
+  color: var(--font-color-primary);
+}
+#messagesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 @media screen and (max-width: 766px) {
   .col-md-2 {

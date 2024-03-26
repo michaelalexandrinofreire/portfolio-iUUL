@@ -23,6 +23,24 @@ document.querySelectorAll(".contato-button").forEach((button) => {
 document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contactForm");
   let messages = JSON.parse(localStorage.getItem("contactMessages")) || [];
+  const messagesList = document.getElementById("messagesList");
+
+  //exibir mensagens
+  function displayMessages() {
+    messagesList.innerHTML = "";
+    messages.forEach(function (message) {
+      const messageDiv = document.createElement("div");
+      messageDiv.classList.add("message");
+      messageDiv.innerHTML = `
+        <p><strong>E-mail:</strong> ${message.email}</p>
+        <p><strong>Título:</strong> ${message.titulo}</p>
+        <p><strong>Mensagem:</strong></p>
+        <p class="message-text"> ${message.mensagem}</p>
+      `;
+      messagesList.appendChild(messageDiv);
+    });
+  }
+  displayMessages();
 
   //adicionar mensagem ao localStorage
   function addMessage(email, titulo, mensagem) {
