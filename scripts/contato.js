@@ -40,13 +40,13 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const name = document.getElementById("titulo").value;
+    const titulo = document.getElementById("titulo").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("mensagem").value;
 
     //objeto com os dados do formulário
     const newMessage = {
-      name: name,
+      titulo: titulo,
       email: email,
       message: message,
     };

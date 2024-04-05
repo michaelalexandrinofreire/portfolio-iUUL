@@ -9,7 +9,7 @@ function displayMessages() {
         const messageItem = document.createElement("div");
         messageItem.innerHTML = `
       <div class="message">
-          <p><strong>Nome:</strong> ${message.name}</p>
+          <p><strong>Titulo:</strong> ${message.titulo}</p>
           <p><strong>E-mail:</strong> ${message.email}</p>
           <p><strong>Mensagem:</strong> ${message.message}</p>
       </div>
