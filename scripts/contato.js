@@ -32,6 +32,7 @@ function storeMessage(message) {
 //limpar mensagens
 function clearMessages() {
   localStorage.removeItem("messages");
+  alert("Mensagens apagadas com sucesso!");
 }
 
 document
