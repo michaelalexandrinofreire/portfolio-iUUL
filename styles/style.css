@@ -517,10 +517,17 @@ textarea {
   text-decoration: none;
 }
 /*mensagens*/
+#messageList{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .message {
   background-color: var(--background-secondary);
   border: var(--primary) 2px solid;
   padding: 10px;
+  margin: 5px;
   border-radius: 6px;
   width: 330px;
   max-width: 330px;
@@ -534,22 +541,17 @@ textarea {
   gap: 10px;
   position: relative;
 }
-.message-text {
-  overflow-y: auto;
-  overflow-x: hidden;
-  word-wrap: break-word;
-  width: 280px;
-  height: 70px;
-  text-align: start;
+.adm-button{
+  background-color: transparent;
+  border: none;
+  color: #771826;
+  font-size: 10px;
+  padding: 10px 0;
+  font-weight: 600;
 }
-.message strong {
-  color: var(--font-color-primary);
-}
-#messagesList {
+.adm-container{
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
+  justify-content: space-between;
 }
 @media screen and (max-width: 766px) {
   .col-md-2 {

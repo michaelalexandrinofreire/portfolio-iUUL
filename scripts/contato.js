@@ -20,44 +20,42 @@ document.querySelectorAll(".contato-button").forEach((button) => {
 });
 
 //localstorage
-document.addEventListener("DOMContentLoaded", function () {
-  const contactForm = document.getElementById("contactForm");
-  let messages = JSON.parse(localStorage.getItem("contactMessages")) || [];
-  const messagesList = document.getElementById("messagesList");
-
-  //exibir mensagens
-  function displayMessages() {
-    messagesList.innerHTML = "";
-    messages.forEach(function (message) {
-      const messageDiv = document.createElement("div");
-      messageDiv.classList.add("message");
-      messageDiv.innerHTML = `
-        <p><strong>E-mail:</strong> ${message.email}</p>
-        <p><strong>Título:</strong> ${message.titulo}</p>
-        <p><strong>Mensagem:</strong></p>
-        <p class="message-text"> ${message.mensagem}</p>
-      `;
-      messagesList.appendChild(messageDiv);
-    });
+function storeMessage(message) {
+  let messages = [];
+  if (localStorage.getItem("messages")) {
+    messages = JSON.parse(localStorage.getItem("messages"));
   }
-  displayMessages();
+  messages.push(message);
+  localStorage.setItem("messages", JSON.stringify(messages));
+}
 
-  //adicionar mensagem ao localStorage
-  function addMessage(email, titulo, mensagem) {
-    const messageObject = { email, titulo, mensagem };
-    messages.push(messageObject);
-    localStorage.setItem("contactMessages", JSON.stringify(messages));
-    console.log("Mensagem adicionada ao localStorage:", messageObject);
-  }
+//limpar mensagens
+function clearMessages() {
+  localStorage.removeItem("messages");
+}
 
-  //enviar formulário
-  contactForm.addEventListener("submit", function (event) {
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
     event.preventDefault();
+
+    const name = document.getElementById("titulo").value;
     const email = document.getElementById("email").value;
-    const titulo = document.getElementById("titulo").value;
-    const mensagem = document.getElementById("mensagem").value;
-    addMessage(email, titulo, mensagem);
-    contactForm.reset();
-    alert("E-mail enviado com sucesso!");
+    const message = document.getElementById("mensagem").value;
+
+    //objeto com os dados do formulário
+    const newMessage = {
+      name: name,
+      email: email,
+      message: message,
+    };
+
+    storeMessage(newMessage);
+
+    //limpar formulário
+    document.getElementById("titulo").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("mensagem").value = "";
+
+    alert("Mensagem enviada com sucesso!");
   });
-});
